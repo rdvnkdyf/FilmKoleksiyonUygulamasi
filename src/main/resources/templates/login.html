@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
+
+	<!-- CSS -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap-reboot.min.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap-grid.min.css}">
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+	<link rel="stylesheet" th:href="@{/css/jquery.mCustomScrollbar.min.css}">
+	<link rel="stylesheet" th:href="@{/css/nouislider.min.css}">
+	<link rel="stylesheet" th:href="@{/css/ionicons.min.css}">
+	<link rel="stylesheet" th:href="@{/css/plyr.css}">
+	<link rel="stylesheet" th:href="@{/css/photoswipe.css}">
+	<link rel="stylesheet" th:href="@{/css/default-skin.css}">
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" th:href="@{/icon/favicon-32x32.png}" sizes="32x32">
+	<link rel="apple-touch-icon" th:href="@{/icon/favicon-32x32.png}">
+	<link rel="apple-touch-icon" sizes="72x72" th:href="@{/icon/apple-touch-icon-72x72.png}">
+	<link rel="apple-touch-icon" sizes="114x114" th:href="@{/icon/apple-touch-icon-114x114.png}">
+	<link rel="apple-touch-icon" sizes="144x144" th:href="@{/icon/apple-touch-icon-144x144.png}">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<title>Film Koleksiyon Uygulaması</title>
+
+</head>
+<body class="body">
+
+	<div class="sign section--bg" >
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="sign__content">
+						<!-- authorization form -->
+						<form th:action="@{/login}" class="sign__form" method="post">
+							
+								<img th:src="@{/img/logo.jpg}" width="150px" height="100px" alt="">
+							
+
+							<div class="sign__group">
+								<input type="text" class="sign__input" name="username" placeholder="Username"/>
+							</div>
+
+							<div class="sign__group">
+								<input type="password" class="sign__input" name="password" placeholder="Password"/>
+							</div>
+
+							
+							
+							<!--<button class="sign__btn" type="submit">Oturum Aç</button>-->
+							<input class="sign__btn" type="submit" value="Login"/>
+
+							<span class="sign__text">Henüz bir hesabınız yok mu? <span><a href="/register">Kayıt Ol</a></span>
+
+							
+						</form>
+						<!-- end authorization form -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS -->
+	<th:block layout:fragment="script">
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<script th:src="@{/js/jquery.mousewheel.min.js}"></script>
+	<script th:src="@{/js/jquery.mCustomScrollbar.min.js}"></script>
+	<script th:src="@{/js/wNumb.js}"></script>
+	<script th:src="@{/js/nouislider.min.js}"></script>
+	<script th:src="@{/js/plyr.min.js}"></script>
+	<script th:src="@{/js/jquery.morelines.min.js}"></script>
+	<script th:src="@{/js/photoswipe.min.js}"></script>
+	<script th:src="@{/js/photoswipe-ui-default.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+    </th:block>
+</body>
+
+</html>
