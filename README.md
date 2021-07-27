@@ -27,6 +27,22 @@ Hibernate kullanıldığı için her şey oto bir şekilde olur.Sadece proje dos
 Yukarıdaki gibi application.properties kısmında parolamızı yazıp ana dizin olan  pom.xml'in  olduğu dizinde  
  `mvn spring-boot:run` ile çalıştırıyoruz.
 
+## Modüller 
+#### Spring Data JPA
+Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate.
+#### Spring Security 
+Highly customizable authentication and access-control framework for Spring applications.
+#### Thymeleaf 
+A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes.
+#### Spring Web 
+Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+#### Spring Boot DevTools 
+Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
+#### H2 Database 
+Provides a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. Supports embedded and server modes as well as a browser based console application.
+#### Spring Configuration Processor 
+Generate metadata for developers to offer contextual help and "code completion" when working with custom configuration keys (ex.application.properties/.yml files).
+
 ## Uyarı
 * Spring Boot Security kullandığı için direk bizi localhost:4545/login 'e atıyor.Username:admin password:admin yazarak admin olarak giriş yapabiliriz veya kayıt olarak user olarak giriş yapabiliriz.
 * Kayıt olma kısmında sağlam bir güvenlik yok.Sadece uygun bir kullanıcı adı ve uygun parola olarak kayıt oluyor.Login register kısmı + özellik olduğu için önem verilmedi.
