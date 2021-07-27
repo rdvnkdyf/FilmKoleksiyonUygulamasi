@@ -24,7 +24,7 @@ Hibernate kullanıldığı için her şey oto bir şekilde olur.Sadece proje dos
 #### Eclipse ve benzeri editörler için: 
  Projeyi import ettikten sonra application.properties kısmında spring.security.user.password kısmına veritabanı yönetim sisteminin sifresini yazıyoruz.Sonra /src/main/java/ridvan/staj/MovieCollectionInternProject/ dizindeki MovieCollectionInternProjectApplication classı çalıştırıyoruz.
 #### Eğer terminal üzerinden çalıştırılacaksa:
-Yukarıdaki gibi application.properties kısmında parolamızı yazıp /src/main/java/ridvan/staj/MovieCollectionInternProject/ dizinine gelip 
+Yukarıdaki gibi application.properties kısmında parolamızı yazıp FilmKoleksiyonUygulamasi pom.xml olduğu dizinine gelip 
  `./mvnw spring-boot:run` ile çalıştırıyoruz.
 
 ## Uyarı
