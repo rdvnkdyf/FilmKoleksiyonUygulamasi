@@ -13,19 +13,19 @@
 
 ## Kurulumu 
 ### Kurulumu 2 aşamada inceleyeğiz.
-#### 1.Dosyaları dahil etme 
-   Kullanılan editöre göre örneğin Eclipse veya IntelliJ IDEA üzerinde dahil etmemiz gerekiyor.Ben popüler olan Eclipse olan editöründe göstericem.
- #### Eclipse 
- * Açık olan bir workspace 'da file seçeneğinden sonra importa tıklıyoruz.
- * Bizim yaptığım uygulamada maven kullanıldı.Maven Kısmında 'Existing Maven Projects' tıklıyoruz.
- * Açılan ekranda Browse'a tıklayıp indirilen projenin root dizinine tıklıyoruz.MovieCollectionInterProject vb. 
- * Eğer projeyi doğru seçtiysek projenin pox.xml dosyası seçili olarak karşımıza çıkar.Buradan sonra finish'e tıklıyoruz.
+Spring Boot'u herhangi bir standart Java kitaplığıyla aynı şekilde kullanabilirsiniz. Bunu yapmak için uygun şu linkten https://repo.spring.io/milestone/org/springframework/boot/spring-boot-cli/1.3.0.M1/spring-boot-cli-1.3.0.M1-bin.zipspring-boot-*.jar dosyalarını sınıf yolunuza ekleyin. Spring Boot, herhangi bir özel araç entegrasyonu gerektirmez, bu nedenle herhangi bir IDE veya metin düzenleyiciyi kullanabilirsiniz. Ayrıca, Spring Boot uygulamasının özel bir yanı yoktur, bu nedenle, diğer Java programlarında olduğu gibi Spring Boot uygulamasını çalıştırabilir ve hatalarını ayıklayabilirsiniz.
+#### Projede maven kullanıldığı için;
+ Maven bir paket yöneticisi ile kurulabilir. OSX Homebrew kullanıyorsanız, brew install maven'i deneyin. Ubuntu kullanıcıları sudo apt-get install maven'i çalıştırabilir. Chocolatey'li Windows kullanıcıları, yükseltilmiş (yönetici) isteminden choco install maven çalıştırabilir.
+
 #### Veritabanı tarafı 
 Hibernate kullanıldığı için her şey oto bir şekilde olur.Sadece proje dosyasının src/main/resources altında templates içinde application.properties  config dosyasında spring.security.user.password kısmına kullandığımız veritabanı sistemindeki hesabın şifresini yazalım.
 
 ## Projeyi Çalıştırma
- Kurulum aşamasında bir problem yaşanmadıysa 
-src/main/java dizini altında ridvan.staj.MovieCollectionInternProject package'ın altında MovieCollectionInternProjectApplication.java üzerine sağ click yapıp Run as seçeneğinden  1 Java Application tıklıyoruz.Console'da en son  "Started MovieCollectionInternProjectApplication in 18.381 seconds (JVM running for 20.746)" mesajıyla karşılaştıysak arama çubuğuna localhost:4545 yazarak giriş yapabiliriz.
+#### Eclipse ve benzeri editörler için: 
+ Projeyi import ettikten sonra application.properties kısmında spring.security.user.password kısmına veritabanı yönetim sisteminin sifresini yazıyoruz.Sonra /src/main/java/ridvan/staj/MovieCollectionInternProject/ dizindeki MovieCollectionInternProjectApplication classı çalıştırıyoruz.
+#### Eğer terminal üzerinden çalıştırılacaksa:
+Yukarıdaki gibi application.properties kısmında parolamızı yazıp /src/main/java/ridvan/staj/MovieCollectionInternProject/ dizinine gelip 
+ `./mvnw spring-boot:run` ile çalıştırıyoruz.
 
 ## Uyarı
 * Spring Boot Security kullandığı için direk bizi localhost:4545/login 'e atıyor.Username:admin password:admin yazarak admin olarak giriş yapabiliriz veya kayıt olarak user olarak giriş yapabiliriz.
